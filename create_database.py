@@ -9,7 +9,6 @@ from langchain_mistralai import MistralAIEmbeddings
 from langchain_community.vectorstores import Chroma
 
 load_dotenv()
-
 data = PyPDFLoader("document_loaders/web.pdf")
 docs = data.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
