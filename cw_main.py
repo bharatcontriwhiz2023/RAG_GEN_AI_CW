@@ -78,7 +78,9 @@ load_dotenv()
 # -------------------- INITIALIZE MODELS --------------------
 embeddings_model = MistralAIEmbeddings(model="mistral-embed")
 
-vectorstore = Chroma(persist_directory="chroma_db", embedding_function=embeddings_model)
+vectorstore = Chroma(
+    persist_directory="contriwhiz_chroma_db", embedding_function=embeddings_model
+)
 
 retriever = vectorstore.as_retriever(
     search_type="mmr",

@@ -58,7 +58,7 @@ embeddings = MistralAIEmbeddings(model="mistral-embed")
 vectorstore = Chroma.from_documents(
     documents=chunks,
     embedding=embeddings,
-    persist_directory="chroma_db",
+    persist_directory="contriwhiz_chroma_db",
 )
 
 print("\nChromaDB created successfully.")
